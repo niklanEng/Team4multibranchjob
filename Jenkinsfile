@@ -1,15 +1,15 @@
-pipeline {
-   agent any
-   stages {
-       stage('Build Code') {
-           steps {
-               sh "echo "Building Artifact"
-           }
-       }
-      stage('Deploy Code') {
-          steps {
-               sh 'echo "Deploying Code"'
-          }
-      }
-   }
-}
+pipeline{
+    agent any
+    stages{
+        stage('build code'){
+            steps{
+             sh 'echo "Building Artifact"'   
+            }
+        }
+        stage('deploy code'){
+            steps{
+                sh 'echo "Deploying Code"'
+            }
+        }
+    }
+} 
